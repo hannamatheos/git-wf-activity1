@@ -18,10 +18,6 @@ terraform {
 }
 
 resource "aws_s3_bucket" "s3_tf" {
-  bucket_prefix = "hanna-sctp-tfci-bucket"
-}
-
-resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
   #checkov:skip=CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
   #checkov:skip=CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
